@@ -16,15 +16,8 @@ namespace Infrastructure.Data.SqlDb
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //if (!optionsBuilder.IsConfigured)
-            //{
-            //    optionsBuilder.UseInMemoryDatabase("LibraryDb");
-            //}
-
             if (!optionsBuilder.IsConfigured)
-            {
                 optionsBuilder.UseSqlServer("Server=localhost;Database=LibraryDb;User Id=sa;Password=Password123;");
-            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
